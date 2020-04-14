@@ -1,0 +1,12 @@
+{
+    "name": "xjryanse/curl",
+    "description": "api",
+    "type": "library",
+    "authors": [
+        {
+            "name": "xjryanse",
+            "email": "xjryanse@sina.com"
+        }
+    ],
+    "require": {}
+}
