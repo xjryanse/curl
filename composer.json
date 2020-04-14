@@ -8,5 +8,11 @@
             "email": "xjryanse@sina.com"
         }
     ],
-    "require": {}
+    "require": {},
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+		  "Xjryanse\\Curl\\": "src/"
+		}
+	}
 }
