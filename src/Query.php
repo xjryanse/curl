@@ -73,7 +73,7 @@ class Query
 	/**
 	 * POST请求，兼容swoole websocket
 	 */
-    public function post( $url,$data)
+    public static function post( $url,$data)
     {
         $headerArray = [];
 
