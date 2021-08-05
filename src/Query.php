@@ -16,7 +16,7 @@ class Query
         return json_decode($output,true);
     }
 
-    public static function posturl($url,$data,$header = []){
+    public static function posturl($url,$data=[],$header = []){
         $dataJson       = json_encode($data);
         $headerArray    = array_merge($header, array("Content-type:application/json;charset='utf-8'","Accept:application/json"));
         $curl = curl_init();
@@ -24,7 +24,9 @@ class Query
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST,FALSE);
         curl_setopt($curl, CURLOPT_POST, 1);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $dataJson);
+        if($data){
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $dataJson);
+        }
         curl_setopt($curl,CURLOPT_HTTPHEADER,$headerArray);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
         $output = curl_exec($curl);

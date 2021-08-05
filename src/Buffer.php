@@ -12,7 +12,7 @@ class Buffer extends Base
      * @param type $header
      * @return type
      */
-    public static function get( $url,$header ) 
+    public static function get( $url,$header=[] ) 
     {
         return self::curlGet($url, $header);
     }
