@@ -19,7 +19,8 @@ class Call
         $opts[CURLOPT_POST]           = 0;
         $opts[CURLOPT_RETURNTRANSFER] = true;
         //关键，超时时间
-        $opts[CURLOPT_TIMEOUT]        = 1;
+        //$opts[CURLOPT_TIMEOUT]        = 1;
+        $opts[CURLOPT_TIMEOUT_MS]     = 200;
         $opts[CURLOPT_FOLLOWLOCATION] = 1;
         $opts[CURLOPT_SSL_VERIFYPEER] = 0;
         $opts[CURLOPT_URL]            = $url;
